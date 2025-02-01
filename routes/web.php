@@ -28,3 +28,10 @@ Route::get('/services', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+
+// routes/web.php
+
+use App\Http\Controllers\ContactController;
+
+Route::post('/contact', [ContactController::class, 'store']);

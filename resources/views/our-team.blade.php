@@ -6,8 +6,7 @@
           <span>Our Team</span>
           <h2>Meet The Team</h2>
           <p>
-            There are many variations of passages of Lorem Ipsum available
-            but the majority have suffered alteration in some form.
+            Our team is the heart of our success. A group of passionate professionals, each bringing unique skills and expertise, we work together to turn innovative ideas into reality. With a shared commitment to excellence, we deliver results that exceed expectations.
           </p>
         </div>
       </div>

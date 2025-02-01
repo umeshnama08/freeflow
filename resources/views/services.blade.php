@@ -1,87 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services</title>
-    
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Slick Slider CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" rel="stylesheet">
-</head>
-<body>
-    @include('navbar')
+<!-- Add this in the <head> section for AOS library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<style>
+    /* Styling for the Services section */
+.services {
+    padding: 60px 0;
+    background-color: #f7f7f7;
+    background: url('assets/images/1381848.jpg')
+}
 
-    <section class="container my-5">
-        <h2 class="text-center mb-4">Our Services</h2>
+.service-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        <!-- Slick Slider for Services -->
-        <div class="service-slider">
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300" alt="Service 1" class="img-fluid">
-                <h5 class="text-center mt-3">Service 1</h5>
-                <p class="text-center">Expert consultation and tailored business strategies to achieve success.</p>
-            </div>
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300" alt="Service 2" class="img-fluid">
-                <h5 class="text-center mt-3">Service 2</h5>
-                <p class="text-center">Comprehensive digital marketing solutions to boost your brand's visibility.</p>
-            </div>
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300" alt="Service 3" class="img-fluid">
-                <h5 class="text-center mt-3">Service 3</h5>
-                <p class="text-center">Custom software development designed to streamline your operations.</p>
-            </div>
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300" alt="Service 4" class="img-fluid">
-                <h5 class="text-center mt-3">Service 4</h5>
-                <p class="text-center">Build innovative solutions for complex business challenges.</p>
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-box h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.service-box p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* For Progress Bar Animation */
+.progress-container {
+    margin-top: 20px;
+    background: #f0f0f0;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #28a745;
+    text-align: center;
+    line-height: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: width 2s ease-in-out;
+}
+
+.progress-bar .percent {
+    display: none;
+}
+
+/* AOS Animations */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .service-box {
+        padding: 20px;
+    }
+}
+
+</style>
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-12 text-center mx-auto mb-5 aos-init aos-animate" data-aos="fade-down">
+                    <small class="small-title">OUR SERVICES</small>
+
+                    <h2>Full Services of Our Digital Agency</h2>
+
+                </div>
+                
+                <!-- First Row: Web Designing, Web Development, E-Commerce Website Development -->
+                <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up">
+                    <div class="service-box">
+                        <h3>Web Designing</h3>
+                        <p>Site Invention love designing websites with creativity. We understand your needs and build websites the way you want - Static, Dynamic, or E-Commerce.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-box">
+                        <h3>Web Development</h3>
+                        <p>We specialize in web development with great customer service. We offer complete design, technical, and enabling infrastructure for your website.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-box">
+                        <h3>E-Commerce Website Development</h3>
+                        <p>Our e-commerce services help businesses create a professional website to boost their sales by attracting customers and providing a seamless shopping experience.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-percent="85">
+                                <span class="percent">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Second Row: SEO, Website Redesigning, Domain Registration & Hosting -->
+                <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-box">
+                        <h3>Search Engine Optimization</h3>
+                        <p>Our SEO services strive to keep your business on top of Google, focusing on ranking and expanding your customer base.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-box">
+                        <h3>Website Redesigning</h3>
+                        <p>Our focus while redesigning websites is to engage and entertain customers with appealing graphics, content, and interactions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-box">
+                        <h3>Domain Registration & Hosting</h3>
+                        <p>We simplify the domain registration process with our technical assistance throughout the process and provide secure hosting services.</p>
+                    </div>
+                </div>
+    
+                <!-- Third Row: Graphic Design, Mobile Application Development, Content Writing -->
+                <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-box">
+                        <h3>Graphic Design</h3>
+                        <p>Our graphic designers create outstanding designs that complement your business needs, leaving a lasting impression on viewers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="700">
+                    <div class="service-box">
+                        <h3>Mobile Application Development</h3>
+                        <p>Mobile apps are essential for businesses to engage with customers on digital platforms. We develop apps that provide information and insights to users.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="800">
+                    <div class="service-box">
+                        <h3>Content Writing</h3>
+                        <p>We create exclusive content that improves SEO, engages users, and helps your business grow with professional writers on board.</p>
+                    </div>
+                </div>
+    
             </div>
         </div>
     </section>
-
-    @include('footer')
-
-    <!-- jQuery (necessary for Slick Slider) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
-    <!-- Slick Slider JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    
-    <!-- Initialize Slick Slider -->
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        $(document).ready(function(){
-            $('.service-slider').slick({
-                infinite: true,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                arrows: true,
-                dots: true,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 2,
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1,
-                        }
-                    }
-                ]
-            });
-        });
+        AOS.init();
     </script>
-
-    <!-- Bootstrap JS and Popper.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-</body>
-</html>
+    

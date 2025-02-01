@@ -22,11 +22,11 @@
                 <li class="nav-item">
                   <a class="ud-menu-scroll" href="#about">About</a>
                 </li>
-                {{-- <li class="nav-item">
-                  <a class="ud-menu-scroll" href="#pricing">Pricing</a>
-                </li> --}}
                 <li class="nav-item">
-                  <a class="ud-menu-scroll" href="#team">Team</a>
+                  <a class="ud-menu-scroll" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="ud-menu-scroll" hxref="#team">Team</a>
                 </li>
                 <li class="nav-item">
                   <a class="ud-menu-scroll" href="#contact">Contact</a>

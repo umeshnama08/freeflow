@@ -13,8 +13,8 @@
         <div class="row">
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="ud-widget">
-              <a href="index.html" class="ud-footer-logo">
-                <span class="fw-bold text-white startup-logo">Startup Template</span>
+              <a href="/" class="ud-footer-logo">
+                <span class="fw-bold text-white startup-logo">FreeFlow Solutions</span>
               </a>
               <p class="ud-widget-desc">
                 We create digital experiences for brands and companies by
